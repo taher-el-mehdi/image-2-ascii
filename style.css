@@ -1,0 +1,142 @@
+body {
+    font-family: 'Courier New', monospace;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.preview-container,
+.result-container {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container h2,
+.result-container h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    color: #2c3e50;
+}
+
+#imagePreview {
+    max-width: 100%;
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+#asciiArt {
+    white-space: pre;
+    font-size: 6px;
+    line-height: 6px;
+    overflow: auto;
+    background-color: white;
+    padding: 10px;
+    max-height: 500px;
+    font-family: monospace;
+}
+
+.controls {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#uploadBtn {
+    background-color: #2ecc71;
+}
+
+#uploadBtn:hover {
+    background-color: #27ae60;
+}
+
+.character-set {
+    margin-top: 10px;
+}
+
+#customCharacters {
+    width: 100%;
+}
+
+#copyBtn {
+    background-color: #9b59b6;
+    margin-top: 10px;
+}
+
+#copyBtn:hover {
+    background-color: #8e44ad;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+    }
+}

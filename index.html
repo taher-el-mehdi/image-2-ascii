@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ASCII Art Converter</h1>
+    
+    <div class="container">
+        <div class="controls">
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="imageUpload">Upload Image:</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+                <div class="control-group">
+                    <label>&nbsp;</label>
+                    <button id="uploadBtn">Process Image</button>
+                </div>
+            </div>
+            
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="width">Output Width (characters):</label>
+                    <input type="number" id="width" value="100" min="10" max="400">
+                </div>
+                <div class="control-group">
+                    <label for="contrast">Contrast:</label>
+                    <input type="range" id="contrast" min="50" max="300" value="100">
+                </div>
+                <div class="control-group">
+                    <label for="brightness">Brightness:</label>
+                    <input type="range" id="brightness" min="50" max="300" value="100">
+                </div>
+            </div>
+            
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="colorMode">Color Mode:</label>
+                    <select id="colorMode">
+                        <option value="standard">Standard ASCII</option>
+                        <option value="inverted">Inverted ASCII</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="charSet">Character Set:</label>
+                    <select id="charSet">
+                        <option value="standard">Standard (Complex)</option>
+                        <option value="simple">Simple</option>
+                        <option value="blocks">Block Characters</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                    <div class="character-set" id="customCharField" style="display:none">
+                        <input type="text" id="customCharacters" placeholder="Enter characters from dark to light" value=" .,:;i1tfLCG08@">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <div class="preview-container">
+                <h2>Original Image</h2>
+                <img id="imagePreview" alt="Preview will appear here">
+            </div>
+            
+            <div class="result-container">
+                <h2>ASCII Result</h2>
+                <pre id="asciiArt">Upload an image to see the ASCII conversion</pre>
+                <button id="copyBtn">Copy ASCII Art</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
